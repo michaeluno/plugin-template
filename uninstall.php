@@ -63,7 +63,7 @@ array_walk_recursive(
 );
 
 // Delete custom tables
-forach( PluginTemplate_Registry::$aDatabaseTables as $_aTable ) {
+foreach( PluginTemplate_Registry::$aDatabaseTables as $_aTable ) {
     if ( ! class_exists( $_aTable[ 'class_name' ] ) ) {
         continue;
     }
