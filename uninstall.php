@@ -3,10 +3,10 @@
  * Cleans up the plugin options.
  *    
  * @package      Plugin Template
- * @copyright    Copyright (c) <COPYRIGHT_YEARS>, <<COPYRIGHT_HOLDER>>
- * @author       <COPYRIGHT_HOLDER>
- * @authorurl    <AUTHOR_URI>
- * @since        1
+ * @copyright    Copyright (c) <COPYRIGHT_YEARS>, <[COPYRIGHT_HOLDER]>
+ * @author       [COPYRIGHT_HOLDER]
+ * @authorurl    [AUTHOR_URI]
+ * @since        0.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

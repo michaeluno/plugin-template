@@ -2,8 +2,8 @@
 /**
  * Plugin Template
  *
- * <PROGRAM_URI>
- * Copyright (c) <COPYRIGHT_YEARS> <COPYRIGHT_HOLDER>
+ * [PROGRAM_URI]
+ * Copyright (c) <COPYRIGHT_YEARS> [COPYRIGHT_HOLDER]
  *
  */
 

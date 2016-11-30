@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:    Plugin Template
- * Plugin URI:     <PROGRAM_URI>
- * Description:    <PROGRAM_DESCRIPTION>
- * Author:         <COPYRIGHT_HOLDER>
- * Author URI:     <AUTHOR_URI>
+ * Plugin URI:     [PROGRAM_URI]
+ * Description:    [PROGRAM_DESCRIPTION]
+ * Author:         [COPYRIGHT_HOLDER]
+ * Author URI:     [AUTHOR_URI]
  * Version:        0.0.3
  */
 
@@ -17,12 +17,12 @@ class PluginTemplate_Registry_Base {
  
     const VERSION        = '0.0.3';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
-    const DESCRIPTION    = '<PROGRAM_DESCRIPTION>';
-    const URI            = '<PROGRAM_URI>';
-    const AUTHOR         = '<COPYRIGHT_HOLDER>';
-    const AUTHOR_URI     = '<AUTHOR_URI>';
-    const PLUGIN_URI     = '<PROGRAM_URI>';
-    const COPYRIGHT      = 'Copyright (c) <COPYRIGHT_YEARS>, <COPYRIGHT_HOLDER>';
+    const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
+    const URI            = '[PROGRAM_URI]';
+    const AUTHOR         = '[COPYRIGHT_HOLDER]';
+    const AUTHOR_URI     = '[AUTHOR_URI]';
+    const PLUGIN_URI     = '[PROGRAM_URI]';
+    const COPYRIGHT      = 'Copyright (c) <COPYRIGHT_YEARS>, [COPYRIGHT_HOLDER]';
     const LICENSE        = '<COPYRIGHT_TYPE>';
     const CONTRIBUTORS   = '';
  

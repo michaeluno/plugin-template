@@ -3,8 +3,8 @@
  * Plugin Template
  *
  *
- * <PROGRAM_URI>
- * Copyright (c) <COPYRIGHT_YEARS> <COPYRIGHT_HOLDER>; Licensed under <LICENSE_TYPE>
+ * [PROGRAM_URI]
+ * Copyright (c) <COPYRIGHT_YEARS> [COPYRIGHT_HOLDER]; Licensed under <LICENSE_TYPE>
  *
  */
 

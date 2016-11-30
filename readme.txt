@@ -1,6 +1,6 @@
 === Plugin Template ===
-Contributors:       <COPYRIGHT_HOLDER>, miunosoft
-Donate link:        <AUTHOR_URI>donate
+Contributors:       [COPYRIGHT_HOLDER], miunosoft
+Donate link:        [AUTHOR_URI]donate
 Tags:               template, plugin
 Requires at least:  3.4
 Tested up to:       4.5.2
@@ -8,7 +8,7 @@ Stable tag:         1.0.0
 License:            GPLv2 or later
 License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 
-<PROGRAM_DESCRIPTION>
+[PROGRAM_DESCRIPTION]
 
 == Description ==
 

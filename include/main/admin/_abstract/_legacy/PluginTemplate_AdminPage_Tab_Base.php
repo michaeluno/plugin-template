@@ -2,8 +2,8 @@
 /**
  * Plugin Template
  * 
- * <AUTHOR_URI>
- * Copyright (c) <COPYRIGHT_YEARS> <COPYRIGHT_HOLDER>; Licensed under <LICENSE_TYPE>
+ * [AUTHOR_URI]
+ * Copyright (c) <COPYRIGHT_YEARS> [COPYRIGHT_HOLDER]; Licensed under <LICENSE_TYPE>
  */
 
 /**

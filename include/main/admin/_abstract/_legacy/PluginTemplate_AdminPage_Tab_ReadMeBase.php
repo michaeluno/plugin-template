@@ -4,8 +4,8 @@
  * 
  * Demonstrates the usage of Admin Page Framework.
  * 
- * <AUTHOR_URI>
- * Copyright (c) <COPYRIGHT_YEARS> <COPYRIGHT_HOLDER>; Licensed under <LICENSE_TYPE>
+ * [AUTHOR_URI]
+ * Copyright (c) <COPYRIGHT_YEARS> [COPYRIGHT_HOLDER]; Licensed under <LICENSE_TYPE>
  * 
  */
 

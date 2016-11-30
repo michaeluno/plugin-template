@@ -1,8 +1,8 @@
 /**
  * Plugin Template
  * 
- * <PROGRAM_URI>
- * Copyright (c) 2015 <COPYRIGHT_HOLDER>
+ * [PROGRAM_URI]
+ * Copyright (c) 2015 [COPYRIGHT_HOLDER]
  * 
  */
 (function($){
