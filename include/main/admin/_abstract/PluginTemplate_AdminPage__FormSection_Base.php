@@ -28,7 +28,9 @@ abstract class PluginTemplate_AdminPage__FormSection_Base extends PluginTemplate
         $this->_oFactory     = $oFactory;
         $this->_sPageSlug    = $sPageSlug ? $sPageSlug : $this->_sPageSlug;
         $this->_sTabSlug     = $sTabSlug ? $sTabSlug : $this->_sTabSlug;
-        $this->_aArguments   = $this->_getArguments( $oFactory );
+        $this->_aArguments   = $this->_getArguments( $oFactory ) + array(
+            'tab_slug'  => $this->_sTabSlug ? $this->_sTabSlug : null,
+        );
         $this->_sSectionID   = $this->_sSectionID
             ? $this->_sSectionID
             : $this->getElement( $this->_aArguments, array( 'section_id' ), '' );
