@@ -5,7 +5,7 @@
  * Description:    [PROGRAM_DESCRIPTION]
  * Author:         [COPYRIGHT_HOLDER]
  * Author URI:     [AUTHOR_URI]
- * Version:        0.0.3
+ * Version:        0.0.4
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class PluginTemplate_Registry_Base {
  
-    const VERSION        = '0.0.3';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
+    const VERSION        = '0.0.4';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
     const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
     const URI            = '[PROGRAM_URI]';
