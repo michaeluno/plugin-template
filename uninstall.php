@@ -28,9 +28,9 @@ if ( ! defined( 'DOING_PLUGIN_UNINSTALL' ) ) {
 /**
  * Set the main plugin file name here.
  */
-$_sMaingPluginFileName  = 'plugin-template.php';
-if ( file_exists( dirname( __FILE__ ). '/' . $_sMaingPluginFileName ) ) {
-   include( $_sMaingPluginFileName );
+$_sMainPluginFileName  = 'plugin-template.php';
+if ( file_exists( dirname( __FILE__ ). '/' . $_sMainPluginFileName ) ) {
+   include( $_sMainPluginFileName );
 }
 
 if ( ! class_exists( 'PluginTemplate_Registry' ) ) {
@@ -46,12 +46,12 @@ foreach( $_aPrefixes as $_sPrefix ) {
     if ( ! $_sPrefix ) { 
         continue; 
     }
-    $GLOBALS['wpdb']->query( "DELETE FROM `" . $GLOBALS['table_prefix'] . "options` WHERE `option_name` LIKE ( '_transient_%{$_sPrefix}%' )" );
-    $GLOBALS['wpdb']->query( "DELETE FROM `" . $GLOBALS['table_prefix'] . "options` WHERE `option_name` LIKE ( '_transient_timeout_%{$_sPrefix}%' )" );    
+    $GLOBALS[ 'wpdb' ]->query( "DELETE FROM `" . $GLOBALS[ 'table_prefix' ] . "options` WHERE `option_name` LIKE ( '_transient_%{$_sPrefix}%' )" );
+    $GLOBALS[ 'wpdb' ]->query( "DELETE FROM `" . $GLOBALS[ 'table_prefix' ] . "options` WHERE `option_name` LIKE ( '_transient_timeout_%{$_sPrefix}%' )" );
 }
 
 // 2. Delete plugin data
-$_oOption  = FetchTweets_Option::getInstance();
+$_oOption  = PluginTemplate_Option::getInstance();
 if ( ! $_oOption->get( array( 'delete', 'delete_upon_uninstall' ) ) ) {
     return true;
 }
@@ -72,4 +72,15 @@ foreach( PluginTemplate_Registry::$aDatabaseTables as $_aTable ) {
         continue;
     }
     $_oTable->uninstall();
+}
+
+// Remove user meta keys used by the plugin
+foreach( Zapper_Registry::$aUserMetas as $_sMetaKey => $_v ) {
+    delete_metadata(
+        'user',    // the user meta type
+        0,  // does not matter here as deleting them all
+        $_sMetaKey,
+        '', // does not matter as deleting
+        true // whether to delete all
+    );
 }

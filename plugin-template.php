@@ -147,7 +147,15 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
      */
     static public $aTaxonomies = array(
     );
-    
+
+    /**
+     * Used user meta keys.
+     * @var array
+     */
+    static public $aUserMetas = array(
+        // meta key => ...whatever values for notes
+    );
+
     /**
      * Used shortcode slugs
      */
@@ -171,13 +179,13 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
         // 'name'              => 'ft_tweets', // serves as the table name suffix
         // 'version'           => '0.0.1',
         // 'across_network'    => true,
-        // 'class_name'        => 'FetchTweets_DatabaseTable_ft_tweets',
+        // 'class_name'        => 'PluginTemplate_DatabaseTable_ft_tweets',
         // ),
 //        'ft_http_requests' => array(
 //            'name'              => 'ft_http_requests',  // serves as the table name suffix
 //            'version'           => '0.0.1',
 //            'across_network'    => true,
-//            'class_name'        => 'FetchTweets_DatabaseTable_ft_http_requests',
+//            'class_name'        => 'PluginTemplate_DatabaseTable_ft_http_requests',
 //        ),
     );
     
