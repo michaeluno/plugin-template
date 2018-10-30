@@ -21,8 +21,8 @@ class PluginTemplate_AdminPage__InPageTab_Data extends PluginTemplate_AdminPage_
      */
     protected function _getArguments( $oFactory ) {
         return array(
-            'tab_slug'  => 'data',
-            'title'     => __( 'Manage Options', 'plugin-template' ),
+            'tab_slug'  => 'reset',
+            'title'     => __( 'Reset', 'plugin-template' ),
         );
     }
     
@@ -35,7 +35,17 @@ class PluginTemplate_AdminPage__InPageTab_Data extends PluginTemplate_AdminPage_
         new PluginTemplate_AdminPage__FormSection_Export( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
         new PluginTemplate_AdminPage__FormSection_Import( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
         new PluginTemplate_AdminPage__FormSection_DoReset( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
+        new PluginTemplate_AdminPage__FormSection_Delete( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
 
+    }
+
+    /**
+     * @param $oFactory
+     */
+    protected function _do( $oFactory ) {
+        echo "<div class='right-submit-button'>"
+                . get_submit_button()
+            . "</div>";
     }
 
 }

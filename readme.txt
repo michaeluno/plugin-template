@@ -4,8 +4,8 @@ Donate link:        [AUTHOR_URI]donate
 Tags:               template, plugin
 Requires at least:  3.4
 Requires PHP:       5.2.4
-Tested up to:       4.5.2
-Stable tag:         1.0.0
+Tested up to:       4.9.8
+Stable tag:         1.0.5
 License:            GPLv2 or later
 License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ This is a plugin template for the developer to modify it to create their own plu
 2. **Another Image**
 
 == Changelog ==
+
+= 1.0.5 =
+- Added some class constants and methods in the registery class.
 
 = 1.0.0 =
 - Released. 

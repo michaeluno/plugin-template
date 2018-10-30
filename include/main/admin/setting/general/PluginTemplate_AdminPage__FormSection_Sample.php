@@ -7,11 +7,11 @@
  */
 
 /**
- * Adds the 'Delete' form section to the 'General' tab.
+ * Adds the 'Sample' form section to the 'General' tab.
  *
  * @since    0.0.3
  */
-class PluginTemplate_AdminPage__FormSection_Delete extends PluginTemplate_AdminPage__FormSection_Base {
+class PluginTemplate_AdminPage__FormSection_Sample extends PluginTemplate_AdminPage__FormSection_Base {
 
     /**
      *
@@ -19,9 +19,9 @@ class PluginTemplate_AdminPage__FormSection_Delete extends PluginTemplate_AdminP
      */
     protected function _getArguments( $oFactory ) {
         return array(
-            'section_id'    => 'delete',
+            'section_id'    => 'sample',
             'tab_slug'      => $this->_sTabSlug,
-            'title'         => __( 'Delete', 'plugin-template' ),
+            'title'         => __( 'Sample', 'plugin-template' ),
         );
     }
 
@@ -36,7 +36,7 @@ class PluginTemplate_AdminPage__FormSection_Delete extends PluginTemplate_AdminP
                 'field_id'          => 'delete_on_uninstall',
                 'type'              => 'checkbox',
                 'show_title_column' => false,
-                'label'             => __( 'Delete plugin data upon plugin uninstall.', 'plugin-template' ),
+                'label'             => __( 'This is a checkbox', 'plugin-template' ),
             )
         );
 

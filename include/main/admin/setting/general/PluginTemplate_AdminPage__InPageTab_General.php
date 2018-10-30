@@ -32,7 +32,7 @@ class PluginTemplate_AdminPage__InPageTab_General extends PluginTemplate_AdminPa
     protected function _load( $oFactory ) {
 
         // Form sections
-        new PluginTemplate_AdminPage__FormSection_Delete( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
+        new PluginTemplate_AdminPage__FormSection_Sample( $oFactory, $this->_sPageSlug, $this->_sTabSlug );
 
     }
 

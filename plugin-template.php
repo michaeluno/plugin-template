@@ -5,7 +5,7 @@
  * Description:    [PROGRAM_DESCRIPTION]
  * Author:         [COPYRIGHT_HOLDER]
  * Author URI:     [AUTHOR_URI]
- * Version:        0.0.4
+ * Version:        0.0.5
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class PluginTemplate_Registry_Base {
  
-    const VERSION        = '0.0.4';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
+    const VERSION        = '0.0.5';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
     const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
     const URI            = '[PROGRAM_URI]';
@@ -60,14 +60,21 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
      * 
      * @since       0.0.1
      */
-    static public $sFilePath;  
+    static public $sFilePath = __FILE__;
     
     /**
      * 
      * @since       0.0.1
      */    
     static public $sDirPath;    
-    
+
+    /**
+     * sys_get_temp_dir() . '/' . PluginTemplate_Registry::$sTempDirName;
+     * @since   0.0.5
+     * @var string
+     */
+    static public $sTempDirBaseName = '';
+
     /**
      * @since    0.0.1
      */
@@ -156,6 +163,10 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
         // meta key => ...whatever values for notes
     );
 
+    static public $aPostMetas = array(
+        // meta key => ...whatever values for notes
+    );
+
     /**
      * Used shortcode slugs
      */
@@ -188,28 +199,50 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
 //            'class_name'        => 'PluginTemplate_DatabaseTable_ft_http_requests',
 //        ),
     );
-    
+
+    /**
+     * Stores action hook names registered with WP Cron.
+     * @var array
+     */
+    static public $aScheduledActionHooks = array(
+        // key (whatever) => value: the name of the action hook
+    );
+
+    /**
+     * Stores custom keys for the WP Cron intervals.
+     * @var array
+     */
+    static public $aWPCronIntervals = array(
+    );
+
+    static public $aCookieSlugs = array(
+        // (any) => cookie slug (cookie slug where in $_COOKIE[ slug ])
+    );
+
+
     /**
      * Sets up class properties.
      * @return      void
      */
-    static function setUp( $sPluginFilePath ) {
-        self::$sFilePath = $sPluginFilePath; 
+    static function setUp() {
         self::$sDirPath  = dirname( self::$sFilePath );  
     }    
     
     /**
      * @return      string
      */
-    public static function getPluginURL( $sRelativePath='' ) {
+    public static function getPluginURL( $sPath='', $bAbsolute=false ) {
+        $_sRelativePath = $bAbsolute
+            ? str_replace('\\', '/', str_replace( self::$sDirPath, '', $sPath ) )
+            : $sPath;
         if ( isset( self::$_sPluginURLCache ) ) {
-            return self::$_sPluginURLCache . $sRelativePath;
+            return self::$_sPluginURLCache . $_sRelativePath;
         }
         self::$_sPluginURLCache = trailingslashit( plugins_url( '', self::$sFilePath ) );
-        return self::$_sPluginURLCache . $sRelativePath;
+        return self::$_sPluginURLCache . $_sRelativePath;
     }
         /**
-         * @since    0.0.1.1.6
+         * @since    0.0.1
          */
         static private $_sPluginURLCache;
 
@@ -248,8 +281,34 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
         // ),
     );
 
+    static public function setAdminNotice( $sMessage, $sType ) {
+        self::$aAdminNotices[] = array( 'message' => $sMessage, 'type' => $sType );
+        add_action( 'admin_notices', array( __CLASS__, 'replyToShowAdminNotices' ) );
+    }
+        static public $aAdminNotices = array();
+        static public function replyToShowAdminNotices() {
+            foreach( self::$aAdminNotices as $_aNotice ) {
+                $_sType = esc_attr( $_aNotice[ 'type' ] );
+                echo "<div class='{$_sType}'>"
+                     . "<p>" . $_aNotice[ 'message' ] . "</p>"
+                     . "</div>";
+            }
+        }
+
+    static public function registerClasses( array $aClasses ) {
+        self::$___aAutoLoadClasses = $aClasses + self::$___aAutoLoadClasses;
+        spl_autoload_register( array( __CLASS__, 'replyToLoadClass' ) );
+    }
+        static private $___aAutoLoadClasses = array();
+        static public function replyToLoadClass( $sCalledUnknownClassName ) {
+            if ( ! isset( self::$___aAutoLoadClasses[ $sCalledUnknownClassName ] ) ) {
+                return;
+            }
+            include( self::$___aAutoLoadClasses[ $sCalledUnknownClassName ] );
+        }
+
 }
-PluginTemplate_Registry::setUp( __FILE__ );
+PluginTemplate_Registry::setUp();
 
 // Do not load if accessed directly. Not exiting here because other scripts will load this main file such as uninstall.php and inclusion list generator
 // and if it exists their scripts will not complete.
