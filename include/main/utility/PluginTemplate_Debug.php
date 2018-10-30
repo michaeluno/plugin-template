@@ -12,4 +12,6 @@
  *
  * @since       0.0.1
  */
-class PluginTemplate_Debug extends PluginTemplate_AdminPageFramework_Debug {}
+class PluginTemplate_Debug extends PluginTemplate_AdminPageFramework_Debug {
+    static public $iLegibleStringCharacterLimit = PHP_INT_MAX;
+}
