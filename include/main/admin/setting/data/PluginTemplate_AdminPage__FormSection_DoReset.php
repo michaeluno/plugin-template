@@ -58,28 +58,30 @@ class PluginTemplate_AdminPage__FormSection_DoReset extends PluginTemplate_Admin
      *
      * @since    0.0.2
      */
-    public function validate( $aInputs, $aOldInput, $oAdminPage, $aSubmitInfo ) {
+    public function _validate( $aInputs, $aOldInput, $oAdminPage, $aSubmitInfo ) {
 
-        $_bVerified = true;
         $_aErrors   = array();
 
-        // If the pressed button is not the one with the check box, do not set a field error.
-        if ( 'reset' !== $aSubmitInfo[ 'field_id' ] ) {
-            return $aInputs;
-        }
+        try {
 
-        if ( ! $aInputs[ 'reset_confirmation_check' ] ) {
+            if ( ! $aInputs[ 'reset_confirmation_check' ] ) {
+                $_sMessage = __( 'Please check the check box to confirm you want to reset the settings.', 'custom-translation-files' );
+                $_aErrors[ $this->_sSectionID ][ 'reset_confirmation_check' ] = $_sMessage;
+                throw new Exception( $_sMessage );
+            }
 
-            $_bVerified = false;
-            $_aErrors[ $this->sSectionID ][ 'reset_confirmation_check' ] = __( 'Please check the check box to confirm you want to reset the settings.', 'plugin-template' );
+            // If the pressed button is not the one with the check box, do not set a field error.
+            if ( 'reset' !== $aSubmitInfo[ 'field_id' ] ) {
+                return $aInputs;
+            }
 
-        }
+        } catch ( Exception $oException ) {
 
-        // An invalid value is found. Set a field error array and an admin notice and return the old values.
-        if ( ! $_bVerified ) {
+            // An invalid value is found. Set a field error array and an admin notice and return the old values.
             $oAdminPage->setFieldErrors( $_aErrors );
-            $oAdminPage->setSettingNotice( __( 'There was something wrong with your input.', 'plugin-template' ) );
+            $oAdminPage->setSettingNotice( __( 'There was something wrong with your input.', 'custom-translation-files' ) );
             return $aOldInput;
+
         }
 
         return $aInputs;

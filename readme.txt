@@ -38,8 +38,12 @@ This is a plugin template for the developer to modify it to create their own plu
 
 == Changelog ==
 
-= 1.0.5 =
-- Added some class constants and methods in the registery class.
 
 = 1.0.0 =
 - Released. 
+
+= 0.0.6 =
+- Fixed a bug calling an undefined property in a form validation.
+
+= 0.0.5 =
+- Added some class constants and methods in the registery class.
