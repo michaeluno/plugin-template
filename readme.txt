@@ -42,6 +42,10 @@ This is a plugin template for the developer to modify it to create their own plu
 = 1.0.0 =
 - Released. 
 
+= 0.0.7 =
+- Added a test suite.
+- Updated Admin Page Framework to 3.8.18.
+
 = 0.0.6 =
 - Fixed a bug calling an undefined property in a form validation.
 

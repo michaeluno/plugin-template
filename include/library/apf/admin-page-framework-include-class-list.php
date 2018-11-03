@@ -129,6 +129,7 @@ $aClassFiles = array(
     "PluginTemplate_AdminPageFramework_Form_Model___Format_EachSection"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_EachSection.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Format_Fields"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_Fields.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Format_FieldsetOutput"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_FieldsetOutput.php", 
+    "PluginTemplate_AdminPageFramework_Form_Model___Format_RepeatableField"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_RepeatableField.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Modifier_FilterRepeatableElements"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/modifier/AdminPageFramework_Form_Model___Modifier_FilterRepeatableElements.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Modifier_SortInput"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/modifier/AdminPageFramework_Form_Model___Modifier_SortInput.php", 
     "PluginTemplate_AdminPageFramework_Form_View___DebugInfo"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_view/AdminPageFramework_Form_View___DebugInfo.php", 
@@ -278,6 +279,7 @@ $aClassFiles = array(
     "PluginTemplate_AdminPageFramework_Form_Model___SectionConditioner"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/element_definition/AdminPageFramework_Form_Model___FieldConditioner.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Format_FormField_Base"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_EachField.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Format_Fieldset"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_FieldsetOutput.php", 
+    "PluginTemplate_AdminPageFramework_Form_Model___Format_RepeatableSection"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/formatter/AdminPageFramework_Form_Model___Format_RepeatableField.php", 
     "PluginTemplate_AdminPageFramework_Form_Model___Modifier_Base"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_model/modifier/AdminPageFramework_Form_Model___Modifier_FilterRepeatableElements.php", 
     "PluginTemplate_AdminPageFramework_Form_View___Attribute_Base"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_view/attribute/AdminPageFramework_Form_View___Attribute_Field.php", 
     "PluginTemplate_AdminPageFramework_Form_View___Attribute_FieldContainer_Base"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/form/_view/attribute/AdminPageFramework_Form_View___Attribute_Field.php", 
@@ -321,5 +323,6 @@ $aClassFiles = array(
     "PluginTemplate_AdminPageFramework_Factory_Model"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/_abstract/AdminPageFramework_Factory.php", 
     "PluginTemplate_AdminPageFramework_Factory_View"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/_abstract/AdminPageFramework_Factory.php", 
     "PluginTemplate_AdminPageFramework_Factory_Controller"=> PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/factory/_common/_abstract/AdminPageFramework_Factory.php", 
-
+    "PluginTemplate_Select2CustomFieldType" => PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/custom-field-types/select2-custom-field-type/Select2CustomFieldType.php",
+    "PluginTemplate_PostTypeTaxonomyCustomFieldType" => PluginTemplate_AdminPageFramework_Registry::$sDirPath . "/custom-field-types/post_type_taxonomy_field-type/PostTypeTaxonomyCustomFieldType.php",
 );

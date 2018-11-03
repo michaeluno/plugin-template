@@ -5,7 +5,7 @@
  * Description:    [PROGRAM_DESCRIPTION]
  * Author:         [COPYRIGHT_HOLDER]
  * Author URI:     [AUTHOR_URI]
- * Version:        0.0.5
+ * Version:        0.0.7
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class PluginTemplate_Registry_Base {
  
-    const VERSION        = '0.0.5';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
+    const VERSION        = '0.0.7';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
     const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
     const URI            = '[PROGRAM_URI]';
@@ -313,6 +313,10 @@ PluginTemplate_Registry::setUp();
 // Do not load if accessed directly. Not exiting here because other scripts will load this main file such as uninstall.php and inclusion list generator
 // and if it exists their scripts will not complete.
 if ( ! defined( 'ABSPATH' ) ) {
+    return;
+}
+
+if ( defined( 'DOING_TESTS' ) && DOING_TESTS ) {
     return;
 }
 
