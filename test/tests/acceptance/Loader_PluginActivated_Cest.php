@@ -15,8 +15,8 @@ class Loader_PluginActivated_Cest {
         UserLoginPage::of( $I )->login( 'admin', 'admin' );
         
         $I->amOnPage( '/wp-admin/plugins.php' );
-        
-        $I->see( 'Plugin Template', 'tr.active' );
+
+        $I->see( getenv( 'PROJECT_TITLE' ), 'tr.active' );
 
     }
 

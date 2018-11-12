@@ -39,9 +39,8 @@ class Plugin_Activation_Test extends \WPPlugin_UnitTestCase {
      */
     public function test_is_active() {
 
-        $this->assertTrue(
-            is_plugin_active( '0-delay-late-caching-for-feeds/0-delay-late-caching-for-feeds.php' )
-        );
+        $_sPluginPath = getenv( 'PROJECT_SLUG' ) . '/' . getenv( 'PROJECT_MAIN_FILE' );
+        $this->assertTrue( is_plugin_active( $_sPluginPath ) );
 
     }
 
