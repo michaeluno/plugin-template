@@ -1,5 +1,8 @@
 Change Log
 
+### 1.1.1
+- Fixed an issue that NUL is created on Windows systems after downloading files. 
+
 ### 1.1.0
 - Supported the configuration distribution files: `codeception.dist.yml`, `acceptance.suite.dist.yml`, `functional.suite.dist.yml`, `unit.suite.dist.yml`.
 - Fixed an incompatibility issue with latest Codeception due to incorrect datable table prefix.
