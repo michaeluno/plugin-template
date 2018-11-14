@@ -42,6 +42,9 @@ This is a plugin template for the developer to modify it to create their own plu
 = 1.0.0 =
 - Released. 
 
+= 0.0.8 =
+- Fixed an issue that temporary directory could not be deleted upon plugin uninstallation.
+
 = 0.0.7 =
 - Added a test suite.
 - Updated Admin Page Framework to 3.8.18.

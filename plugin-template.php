@@ -5,7 +5,7 @@
  * Description:    [PROGRAM_DESCRIPTION]
  * Author:         [COPYRIGHT_HOLDER]
  * Author URI:     [AUTHOR_URI]
- * Version:        0.0.7
+ * Version:        0.0.8
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class PluginTemplate_Registry_Base {
  
-    const VERSION        = '0.0.7';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
+    const VERSION        = '0.0.8';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
     const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
     const URI            = '[PROGRAM_URI]';
@@ -69,7 +69,7 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
     static public $sDirPath;    
 
     /**
-     * sys_get_temp_dir() . '/' . PluginTemplate_Registry::$sTempDirName;
+     * rtrim( sys_get_temp_dir(), '/' ) . '/' . PluginTemplate_Registry::$sTempDirBaseName;
      * @since   0.0.5
      * @var string
      */
