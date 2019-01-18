@@ -4,8 +4,8 @@ Donate link:        [AUTHOR_URI]donate
 Tags:               template, plugin
 Requires at least:  3.4
 Requires PHP:       5.2.4
-Tested up to:       4.9.8
-Stable tag:         1.0.5
+Tested up to:       5.0.3
+Stable tag:         1.0.9
 License:            GPLv2 or later
 License URI:        http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ This is a plugin template for the developer to modify it to create their own plu
 
 = 1.0.0 =
 - Released. 
+
+= 0.0.9 =
+- Fixed an issue that translation files were not automatically detected by wordpress.org.
 
 = 0.0.8 =
 - Fixed an issue that temporary directory could not be deleted upon plugin uninstallation.
