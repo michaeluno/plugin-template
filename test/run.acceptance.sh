@@ -61,6 +61,10 @@ set -ex
 
 # Make sure Codeception is installed
 downloadCodeception "$CODECEPT"
+## Codeception PHP 5.x Build has not been able to call the phar file absolute path since around January 2019
+cp "$CODECEPT" codecept.phar
+CODECEPT=codecept.phar
+php $CODECEPT --version
 
 # Check if the codecemption configuration file exists.
 if [ ! -f "$CODECEPT_TEST_DIR/codeception.yml" ]; then

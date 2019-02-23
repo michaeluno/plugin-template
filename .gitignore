@@ -9,6 +9,9 @@ _memos
 *.old
 *.bak
 
+# PHP script files
+*.phar
+
 # Compiled source #
 ###################
 *.com
