@@ -5,7 +5,7 @@
  * Description:    [PROGRAM_DESCRIPTION]
  * Author:         [COPYRIGHT_HOLDER]
  * Author URI:     [AUTHOR_URI]
- * Version:        0.0.9
+ * Version:        0.1.0
  * Text Domain:   
  * Domain Path:    language
  */
@@ -17,7 +17,7 @@
  */
 class PluginTemplate_Registry_Base {
  
-    const VERSION        = '0.0.9';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
+    const VERSION        = '0.1.0';    // <--- DON'T FORGET TO CHANGE THIS AS WELL!!
     const NAME           = 'Plugin Template';
     const DESCRIPTION    = '[PROGRAM_DESCRIPTION]';
     const URI            = '[PROGRAM_URI]';
@@ -235,18 +235,19 @@ final class PluginTemplate_Registry extends PluginTemplate_Registry_Base {
      */
     public static function getPluginURL( $sPath='', $bAbsolute=false ) {
         $_sRelativePath = $bAbsolute
-            ? str_replace('\\', '/', str_replace( self::$sDirPath, '', $sPath ) )
+            ? str_replace( '\\', '/', str_replace( self::$sDirPath, '', $sPath ) )
             : $sPath;
-        if ( isset( self::$_sPluginURLCache ) ) {
-            return self::$_sPluginURLCache . $_sRelativePath;
+        $_sRelativePath = ltrim( $_sRelativePath, '/.' );
+        if ( isset( self::$___sPluginURLCache ) ) {
+            return self::$___sPluginURLCache . $_sRelativePath;
         }
-        self::$_sPluginURLCache = trailingslashit( plugins_url( '', self::$sFilePath ) );
-        return self::$_sPluginURLCache . $_sRelativePath;
+        self::$___sPluginURLCache = trailingslashit( plugins_url( '', self::$sFilePath ) );
+        return self::$___sPluginURLCache . $_sRelativePath;
     }
         /**
-         * @since    0.0.1
+         * @since       0.0.1
          */
-        static private $_sPluginURLCache;
+        static private $___sPluginURLCache;
 
     /**
      * Requirements.

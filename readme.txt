@@ -39,8 +39,9 @@ This is a plugin template for the developer to modify it to create their own plu
 == Changelog ==
 
 
-= 1.0.0 =
-- Released. 
+= 0.1.0 =
+- Fixed a bug that an unknown class was used in `uninstall.php`.
+- Fixed a bug with `PluginTemplate_Registry::getPluginURL()` that slashes were doubled when an absolute path was passed.
 
 = 0.0.9 =
 - Fixed an issue that translation files were not automatically detected by wordpress.org.
